@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.29826aef.css",
-    "main.js": "/static/js/main.33236e8d.js",
-    "static/js/787.516de95a.chunk.js": "/static/js/787.516de95a.chunk.js",
-    "service-worker.js": "/service-worker.js",
-    "index.html": "/index.html",
-    "main.29826aef.css.map": "/static/css/main.29826aef.css.map",
-    "main.33236e8d.js.map": "/static/js/main.33236e8d.js.map",
-    "787.516de95a.chunk.js.map": "/static/js/787.516de95a.chunk.js.map"
+    "main.css": "/pkm-sandwich-finder/static/css/main.29826aef.css",
+    "main.js": "/pkm-sandwich-finder/static/js/main.2f02349f.js",
+    "static/js/787.516de95a.chunk.js": "/pkm-sandwich-finder/static/js/787.516de95a.chunk.js",
+    "service-worker.js": "/pkm-sandwich-finder/service-worker.js",
+    "index.html": "/pkm-sandwich-finder/index.html",
+    "main.29826aef.css.map": "/pkm-sandwich-finder/static/css/main.29826aef.css.map",
+    "main.2f02349f.js.map": "/pkm-sandwich-finder/static/js/main.2f02349f.js.map",
+    "787.516de95a.chunk.js.map": "/pkm-sandwich-finder/static/js/787.516de95a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.29826aef.css",
-    "static/js/main.33236e8d.js"
+    "static/js/main.2f02349f.js"
   ]
 }
