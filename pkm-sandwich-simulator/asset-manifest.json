@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pokemon-sandwich-simulator/static/css/main.e4ef41f2.css",
+    "main.js": "/pokemon-sandwich-simulator/static/js/main.92ed1373.js",
+    "static/js/787.ceda0c3e.chunk.js": "/pokemon-sandwich-simulator/static/js/787.ceda0c3e.chunk.js",
+    "index.html": "/pokemon-sandwich-simulator/index.html",
+    "main.e4ef41f2.css.map": "/pokemon-sandwich-simulator/static/css/main.e4ef41f2.css.map",
+    "main.92ed1373.js.map": "/pokemon-sandwich-simulator/static/js/main.92ed1373.js.map",
+    "787.ceda0c3e.chunk.js.map": "/pokemon-sandwich-simulator/static/js/787.ceda0c3e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4ef41f2.css",
+    "static/js/main.92ed1373.js"
+  ]
+}
