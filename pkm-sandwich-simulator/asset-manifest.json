@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pkm-sandwich-simulator/static/css/main.e4ef41f2.css",
+    "main.js": "/pkm-sandwich-simulator/static/js/main.0b4cd3e5.js",
+    "static/js/787.ceda0c3e.chunk.js": "/pkm-sandwich-simulator/static/js/787.ceda0c3e.chunk.js",
+    "index.html": "/pkm-sandwich-simulator/index.html",
+    "main.e4ef41f2.css.map": "/pkm-sandwich-simulator/static/css/main.e4ef41f2.css.map",
+    "main.0b4cd3e5.js.map": "/pkm-sandwich-simulator/static/js/main.0b4cd3e5.js.map",
+    "787.ceda0c3e.chunk.js.map": "/pkm-sandwich-simulator/static/js/787.ceda0c3e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4ef41f2.css",
+    "static/js/main.0b4cd3e5.js"
+  ]
+}
