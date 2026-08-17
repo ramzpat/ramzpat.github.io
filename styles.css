@@ -1,0 +1,370 @@
+/* ---------------------------------------------------------------------------
+   Design tokens
+   Dark is the default (it always has been); light follows the system setting.
+   --------------------------------------------------------------------------- */
+
+:root {
+  --bg: #14161a;
+  --surface: #1b1e24;
+  --surface-hover: #21252c;
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.16);
+
+  --ink: #e7eaee;
+  --ink-secondary: #a6aeba;
+  --ink-muted: #78818f;
+
+  --accent: #8ab4f8;
+  --accent-hover: #adc8fa;
+  --accent-faint: rgba(138, 180, 248, 0.16);
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Type scale */
+  --step--1: 0.8125rem;
+  --step-0: 1rem;
+  --step-1: 1.125rem;
+  --step-2: 1.375rem;
+  --step-3: clamp(1.75rem, 1.35rem + 1.8vw, 2.5rem);
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  --radius: 10px;
+  --measure: 46rem;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #fbfbfc;
+    --surface: #ffffff;
+    --surface-hover: #f4f5f7;
+    --line: rgba(0, 0, 0, 0.1);
+    --line-strong: rgba(0, 0, 0, 0.18);
+
+    --ink: #1b1f26;
+    --ink-secondary: #4d5661;
+    --ink-muted: #6b7480;
+
+    --accent: #1a5fd0;
+    --accent-hover: #1348a4;
+    --accent-faint: rgba(26, 95, 208, 0.1);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Base
+   --------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.25;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  color: var(--ink);
+}
+
+.skip-link:focus {
+  left: var(--space-2);
+  z-index: 10;
+}
+
+/* ---------------------------------------------------------------------------
+   Page shell
+   --------------------------------------------------------------------------- */
+
+.page {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: var(--space-7) var(--space-5) var(--space-6);
+}
+
+@media (min-width: 40em) {
+  .page {
+    padding: var(--space-8) var(--space-6) var(--space-7);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Masthead
+   --------------------------------------------------------------------------- */
+
+.masthead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.avatar {
+  flex: none;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  object-fit: cover;
+}
+
+@media (min-width: 40em) {
+  .avatar {
+    width: 88px;
+    height: 88px;
+  }
+}
+
+.masthead h1 {
+  font-size: var(--step-3);
+  letter-spacing: -0.02em;
+}
+
+.role {
+  color: var(--ink-secondary);
+  font-size: var(--step-1);
+}
+
+.location {
+  color: var(--ink-muted);
+  font-size: var(--step--1);
+}
+
+/* Contact chips. These wrap instead of disappearing on small screens. */
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+}
+
+.contacts a {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-secondary);
+  font-size: var(--step--1);
+}
+
+.contacts a:hover {
+  border-color: var(--accent);
+  background: var(--accent-faint);
+  color: var(--accent-hover);
+  text-decoration: none;
+}
+
+.intro {
+  margin-top: var(--space-5);
+  color: var(--ink-secondary);
+  font-size: var(--step-1);
+  text-wrap: pretty;
+}
+
+/* ---------------------------------------------------------------------------
+   Sections
+   --------------------------------------------------------------------------- */
+
+.section {
+  margin-top: var(--space-7);
+}
+
+.section > h2 {
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-muted);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+/* ---------------------------------------------------------------------------
+   Entries (experience, education, awards)
+   --------------------------------------------------------------------------- */
+
+/* Dates stack under the title on narrow screens and sit in their own column
+   beside it from 40em up, so a long institution name wraps inside its column
+   instead of shunting the date onto a line of its own. */
+.entry-head {
+  display: grid;
+  gap: var(--space-1);
+}
+
+@media (min-width: 40em) {
+  .entry-head {
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    column-gap: var(--space-4);
+  }
+
+  .entry-meta {
+    text-align: right;
+  }
+}
+
+.entry-title {
+  font-size: var(--step-2);
+}
+
+.entry-meta {
+  color: var(--ink-muted);
+  font-size: var(--step--1);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.entry-sub {
+  margin-top: var(--space-1);
+  color: var(--ink-secondary);
+}
+
+.entry-note {
+  margin-top: var(--space-2);
+  color: var(--ink-secondary);
+  font-size: var(--step--1);
+  text-wrap: pretty;
+}
+
+/* ---------------------------------------------------------------------------
+   Project cards
+   --------------------------------------------------------------------------- */
+
+.card {
+  padding: var(--space-5);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.card:hover {
+  border-color: var(--line-strong);
+  background: var(--surface-hover);
+}
+
+.card h3 {
+  font-size: var(--step-2);
+}
+
+.card p {
+  margin-top: var(--space-2);
+  color: var(--ink-secondary);
+  text-wrap: pretty;
+}
+
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+  font-size: var(--step--1);
+}
+
+.card-links a::after {
+  content: " \2192";
+}
+
+/* ---------------------------------------------------------------------------
+   Footer
+   --------------------------------------------------------------------------- */
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  justify-content: space-between;
+  margin-top: var(--space-8);
+  padding-top: var(--space-4);
+  padding-bottom: env(safe-area-inset-bottom);
+  border-top: 1px solid var(--line);
+  color: var(--ink-muted);
+  font-size: var(--step--1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
