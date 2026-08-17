@@ -14,9 +14,6 @@ them directly. (It used to be a Create React App build generated from
   - Source: https://github.com/ramzpat/pkm-sandwich-recipe
   - Built with `TypeScript`, because I wanted to learn how to build a client-side web app
     and `TypeScript` seems good for maintenance.
-- **Sandwich Simulator** — a hosted build of
-  [cecilbowen/pokemon-sandwich-simulator](https://github.com/cecilbowen/pokemon-sandwich-simulator).
-  - Live: https://ramzpat.github.io/pkm-sandwich-simulator/
 
 ## Planned
 
@@ -31,5 +28,7 @@ avatar.webp             portrait used on the landing page
 web_icon.*, favicon.ico icons
 manifest.json           PWA manifest
 pkm-sandwich-finder/    deployed build, from pkm-sandwich-recipe
-pkm-sandwich-simulator/ deployed build, from pokemon-sandwich-simulator
+pkm-sandwich-simulator/ deployed build of the third-party
+                        cecilbowen/pokemon-sandwich-simulator; not linked from
+                        the landing page
 ```
