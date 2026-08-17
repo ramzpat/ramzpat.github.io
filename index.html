@@ -76,6 +76,25 @@
           <div class="stack">
             <article class="card">
               <div class="card-head">
+                <h3>wiki-mcp-go</h3>
+                <p class="card-meta">2026 &ndash; Present</p>
+              </div>
+              <p class="card-body">
+                An MCP server for semantic search over a personal wiki, built as side work.
+                Fuses keyword search with vector similarity search over embeddings computed
+                in-process, in Go for a fast Cloud Run cold start. CI ingests content from a
+                private companion git repo at build time and bakes the index and embedding
+                model straight into the container image, so the running service never touches
+                the source data; images are pushed to a private registry and served over
+                streamable HTTP, scaling like any other Cloud Run service.
+              </p>
+              <p class="card-links">
+                <a href="https://github.com/ramzpat/wiki-mcp-go" rel="noopener">Source</a>
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card-head">
                 <h3>Pok&eacute;mon SV Sandwich Finder</h3>
                 <p class="card-meta">2022 &ndash; 2023</p>
               </div>
